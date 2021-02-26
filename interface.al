@@ -1,0 +1,4 @@
+interface IPushEventBridge
+{
+    procedure PostToEventBridge();
+}
