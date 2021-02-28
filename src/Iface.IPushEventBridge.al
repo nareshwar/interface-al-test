@@ -1,4 +1,4 @@
-interface IPushEventBridge
+interface "IPushEventBridge"
 {
     procedure PostToEventBridge();
     procedure UpdateDocument();
