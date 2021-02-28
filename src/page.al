@@ -1,22 +1,31 @@
 page 50141 "Event Bridge Test Page"
 {
-    PageType = Card;
     ApplicationArea = All;
     UsageCategory = Administration;
     Caption = 'Event Bridge Test Page';
-
-    actions
+    PageType = StandardDialog;
+    layout
     {
-        area(Processing)
+        area(Content)
         {
-            action("Event Test")
+            field("Event Bridge Type"; EventBridgeType)
             {
+                Caption = 'Event Bridge Type';
                 ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-                end;
             }
         }
     }
+
+    trigger OnQueryClosePage(CloseAction: Action): Boolean
+    begin
+        if CloseAction = Action::OK then begin
+            EventBridgeProcessing.SetInterface(EventBridgeType);
+            EventBridgeProcessing.Run();
+        end;
+
+    end;
+
+    var
+        EventBridgeType: Enum "Event Bridge Document Type";
+        EventBridgeProcessing: Codeunit "Event Bridge Test";
 }

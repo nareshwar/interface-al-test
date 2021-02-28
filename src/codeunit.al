@@ -1,22 +1,22 @@
-codeunit 50140 "Azure Test"
+codeunit 50140 "Event Bridge Test"
 {
-    procedure AzureTest()
-    var
-        Client: HttpClient;
-        Content: HttpContent;
-        ResponseMessage: HttpResponseMessage;
-        Stream: InStream;
-        Url: Text;
-        ResponseText: Text;
+
+    procedure SetInterface(var EventBridgeType: Enum "Event Bridge Document Type")
     begin
-        Url := 'hhttps://test101sqs.azurewebsites.net/api/Test101Sqs?code=yCz7bsJ5szaNhRbk1DA0JWA5477fau0IKAN1WDmBaDza7/UpVBz5ww==';
-
-        if not client.Post(Url, Content, ResponseMessage) then
-            exit;
-
-        //if not ResponseMessage.IsSuccessStatusCode() then
-        //    exit;
-        ResponseMessage.Content().ReadAs(ResponseText);
-        Message(ResponseText);
+        EventType := EventBridgeType;
     end;
+
+    trigger OnRun()
+    begin
+        ProcessDocument(EventType);
+    end;
+
+    local procedure ProcessDocument(EventInterface: Interface IPushEventBridge)
+    begin
+        EventInterface.PostToEventBridge();
+        EventInterface.UpdateDocument();
+    end;
+
+    var
+        EventType: Enum "Event Bridge Document Type";
 }
