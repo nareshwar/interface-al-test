@@ -7,7 +7,7 @@ codeunit 50144 "Post Purch. - Event Bridge" implements IPushEventBridge
 
     internal procedure UpdateDocument()
     begin
-        Message(Pur);
+        Message(PurchDocUpdatedMsg);
     end;
 
     var
