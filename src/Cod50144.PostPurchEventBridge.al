@@ -11,6 +11,6 @@ codeunit 50144 "Post Purch. - Event Bridge" implements IPushEventBridge
     end;
 
     var
-        PurchDocumentPostedToEventBridgeMsg: Label 'Purchase document has been posted to Event Bridge';
+        PurchDocumentPostedToEventBridgeMsg: Label 'Purchase document has been posted to Event Bridge.';
         PurchDocUpdatedMsg: Label 'Purchase document has been updated.';
 }

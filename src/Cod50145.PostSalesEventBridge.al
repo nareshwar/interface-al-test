@@ -11,6 +11,6 @@ codeunit 50145 "Post Sales - Event Bridge" implements IPushEventBridge
     end;
 
     var
-        SalesDocumentPostedToEventBridgeMsg: Label 'Sales document has been posted to Event Bridge';
+        SalesDocumentPostedToEventBridgeMsg: Label 'Sales document has been posted to Event Bridge.';
         SalesDocUpdatedMsg: Label 'Sales document has been updated.';
 }

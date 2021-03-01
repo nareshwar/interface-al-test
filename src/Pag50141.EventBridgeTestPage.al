@@ -27,5 +27,5 @@ page 50141 "Event Bridge Test Page"
 
     var
         EventBridgeType: Enum "Event Bridge Document Type";
-        EventBridgeProcessing: Codeunit "Event Bridge Test";
+        EventBridgeProcessing: Codeunit "Event Bridge Processing";
 }

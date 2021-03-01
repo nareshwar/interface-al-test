@@ -11,6 +11,6 @@ codeunit 50146 "Post Transfer - Event Bridge" implements IPushEventBridge
     end;
 
     var
-        TransferDocumentPostedToEventBridgeMsg: Label 'Transfer document has been posted to Event Bridge';
+        TransferDocumentPostedToEventBridgeMsg: Label 'Transfer document has been posted to Event Bridge.';
         TransferDocUpdatedMsg: Label 'Transfer document has been updated.';
 }
