@@ -1,4 +1,4 @@
-codeunit 50140 "Event Bridge Test"
+codeunit 50140 "Event Bridge Processing"
 {
 
     procedure SetInterface(var EventBridgeType: Enum "Event Bridge Document Type")
