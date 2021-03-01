@@ -6,7 +6,6 @@ enum 50142 "Event Bridge Document Type" implements IPushEventBridge
     {
         Caption = 'Sales Order';
         Implementation = IPushEventBridge = "Post Sales - Event Bridge";
-
     }
 
     value(2; PurchaseOrder)
@@ -19,6 +18,5 @@ enum 50142 "Event Bridge Document Type" implements IPushEventBridge
     {
         Caption = 'Transfer Order';
         Implementation = IPushEventBridge = "Post Transfer - Event Bridge";
-
     }
 }
